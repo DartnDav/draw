@@ -1,0 +1,40 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+  
+  nav {
+    flex: 0 0 300px;
+    background: #ccc;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  nav ul li span,
+  nav ul li button {
+    display: block;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul li button {
+    width: 100%;
+  }
