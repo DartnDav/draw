@@ -148,6 +148,7 @@ var draw = (function() {
 //Initialize draw
 draw.init();
 
+// DH
 //Add a mousemove listener to the canvas
 //When the mouse reports a change of position use the event data to
 //set and report the x,y position on the mouse.
