@@ -65,6 +65,12 @@ var draw = (function() {
       return shape;
     },
 
+    // DH Added
+    getColor: function() {
+      return myColor;
+    },
+    // DH Added
+
     setIsDrawing: function(bool) {
       isDrawing = bool;
     },
@@ -90,11 +96,10 @@ var draw = (function() {
       ctx.save();
     },
 
-    //Draw a circle
+    //Draw a circle   DH
     drawCircle: function() {
-      ctx.strokeStyle = "#" + Math.floor(Math.random() * 16777215).toString(16);
-      ctx.fillStyle = "#" + Math.floor(Math.random() * 16777215).toString(16);
-
+      ctx.strokeStyle = "color";
+      ctx.fillStyle = "color";
       let a = x1 - x2;
       let b = y1 - y2;
       let radius = Math.sqrt(a * a + b * b);
@@ -148,7 +153,6 @@ var draw = (function() {
 //Initialize draw
 draw.init();
 
-// DH
 //Add a mousemove listener to the canvas
 //When the mouse reports a change of position use the event data to
 //set and report the x,y position on the mouse.
@@ -218,3 +222,13 @@ document.getElementById("btnPath").addEventListener(
   },
   false
 );
+
+// DH Added
+document.getElementById("myColor").addEventListener(
+  "click",
+  function() {
+    draw.getColor("myColor");
+  },
+  false
+);
+// DH Added
