@@ -1,40 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-    font-family: sans-serif;
-  }
-  
-  .wrapper {
-    display: flex;
-  }
-  
-  nav {
-    flex: 0 0 300px;
-    background: #ccc;
-    min-height: 100vh;
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    padding: 0;
-    margin: 0;
-  
-  }
-  
-  nav ul li span,
-  nav ul li button {
-    display: block;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  nav ul li button {
-    width: 100%;
-  }
+  font-family: sans-serif;
+}
+
+.wrapper,
+.flex {
+  display: flex;
+}
+
+.flex {
+  padding: 5px;
+  width: calc(100% - 5px);
+}
+
+.flex div {
+  flex: 0 0 50%;
+  text-align: center;
+  border: 1px #083188 solid;
+  border-radius: 10px;
+  margin: 0 0 0 2.5px;
+}
+
+.flex div:first-child {
+  margin: 0 2.5px 0 0;
+}
+
+nav {
+  flex: 0 0 200px;
+  background: rgba(8, 103, 136, 1);
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 2.5px 6px 2.5px 0px;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li div,
+nav ul li button {
+  display: block;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul li div {
+  background: #fff;
+}
+nav ul li button {
+  width: calc(100% - 10px);
+  margin: 0 auto 5px;
+}
+
+button {
+  border: 1px solid #083188;
+  color: #083188;
+  border-radius: 15px;
+  box-shadow: 4px 4px lightblue;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  font-size: 105%;
+}
